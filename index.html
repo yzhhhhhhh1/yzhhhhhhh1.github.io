@@ -425,11 +425,6 @@
     
     <div id="canvas-container"></div>
 
-    <div id="apple-image" src="apple.png" 
-            alt="红苹果" 
-            class="apple-hide"></div>
-
-
     <div id="ui-layer">
         <h1>Merry Christmas - To 芋袁丸子</h1>
         <div class="upload-wrapper">
@@ -1055,10 +1050,7 @@
                 isAppleVisible = false;
             }
         });
-        
-        // 预加载图片，避免显示延迟
-        const preloadImage = new Image();
-        preloadImage.src = appleImg.src;
+
         }
 
         function takeScreenshot() {
