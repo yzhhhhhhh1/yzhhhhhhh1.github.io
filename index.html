@@ -416,7 +416,7 @@
 <body>
     <div id="hand-cursor"></div>
 
-    <audio id="bgm" src="ChristmasSong.mp3" preload="auto" loop playsinline style="display: none"></audio>
+    <audio id="bgm" src="./ChristmasSong.mp3" preload="auto" loop playsinline style="display: none"></audio>
 
     <div id="loader">
         <div class="spinner"></div>
@@ -999,7 +999,7 @@
 
             const playBtn = document.getElementById('playBtn');
             // 注意：替换为你自己的音频文件路径
-            const audioFileUrl = "cd.m4a";
+            const audioFileUrl = "./cd.m4a";
             // 用于存储音频对象，避免重复创建
             let currentAudio = null;
 
@@ -1018,11 +1018,13 @@
             // 创建新的音频对象并播放
             // 注意：现代浏览器通常要求音频播放必须在用户交互（如点击）后触发
             currentAudio = new Audio(audioFileUrl);
+            console.info("!!!!!!!!!!!!!!!!!!1111")
             currentAudio.play().catch(error => {
                 // 如果播放失败（例如文件找不到），在控制台提示
                 console.error('音频播放失败，请检查文件路径和网络:', error);
                 alert('播放失败，请检查音频文件路径。');
             });
+            console.info("!!!!!!!!!!!!!!!!!!1111")
         });
 
         const showAppleBtn = document.getElementById('showAppleBtn');
